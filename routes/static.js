@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+// View Engine and Templates
+
 
 // Static Routes
 // Set up "public" folder / subfolders for static files
