@@ -30,7 +30,7 @@ a {
 }
 
 /* ===================================
-   Mobile-First Layout (Base Styles)
+  Mobile-First Layout (Base Styles)
    =================================== */
 
 .wrapper {
@@ -40,29 +40,62 @@ a {
 }
 
 /* Header Styles */
-.site-header {
-  background-color: #2c3e50;
-  color: #fff;
-  padding: 1rem;
-}
-
-.header-content {
+#top-header {
+  background-color: #fff;
+  color: #2c3e50;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
-.site-title {
-  font-size: 1.5rem;
+.siteName {
+  font-size: 3.5rem;
   font-weight: bold;
 }
 
+.siteName a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.siteName a:hover {
+  color: #00bcd4;
+}
+
+/* Header Tools (My Account) */
+#tools {
+  display: flex;
+  align-items: center;
+}
+
+#tools a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  text-align: center;
+  background-color: #00bcd4;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#tools a:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 .my-account {
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1.9rem;
   transition: color 0.3s;
+  text-align: center;
 }
 
 .my-account:hover {
@@ -93,10 +126,12 @@ a {
   color: #fff;
   text-align: center;
   transition: background-color 0.3s;
+  font-size: 1.5rem;
 }
 
 .nav-list a:hover {
   background-color: #2c3e50;
+  
 }
 
 /* Main Content */
@@ -111,20 +146,59 @@ main {
 /* Hero Section */
 .hero {
   margin-bottom: 2rem;
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/delorean.jpg'); /* Cambiar la imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
 }
 
 .hero-content h1 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #2c3e50;
+  color: #fff;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  width: 100%;
 }
 
 /* Delorean Showcase */
 .delorean-showcase {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  max-width: 350px;
+  width: 100%;
 }
 
 .delorean-info {
@@ -132,9 +206,10 @@ main {
 }
 
 .delorean-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #00bcd4;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .delorean-features {
@@ -142,10 +217,12 @@ main {
 }
 
 .delorean-features li {
-  color: #00bcd4;
+  color: #fff;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   padding-left: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
 }
 
 .btn-own {
@@ -156,21 +233,20 @@ main {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: fit-content;
 }
 
 .btn-own:hover {
   background-color: #0097a7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .delorean-image {
-  order: 2;
-}
-
-.delorean-image img {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  display: none; /* Ocultamos la imagen duplicada ya que ahora está de fondo */
 }
 
 /* Content Grid */
@@ -255,21 +331,27 @@ main {
    =================================== */
 
 @media screen and (min-width: 768px) {
-  /* Delorean Showcase - Side by Side */
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Delorean Showcase - Tarjeta a la izquierda */
   .delorean-showcase {
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
+    max-width: 400px;
+    padding: 2rem;
   }
 
-  .delorean-info {
-    flex: 1;
-    order: 1;
-  }
-
-  .delorean-image {
-    flex: 1;
-    order: 2;
+  .delorean-title {
+    font-size: 2.2rem;
   }
 
   /* Content Grid - Side by Side */
@@ -312,12 +394,17 @@ main {
     font-size: 2rem;
   }
 
-  .hero-content h1 {
-    font-size: 2.2rem;
+  .hero {
+    min-height: 650px;
+  }
+
+  .delorean-showcase {
+    max-width: 450px;
+    padding: 2.5rem;
   }
 
   .delorean-title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   .upgrades-grid {
