@@ -1,6 +1,331 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
+/* ===================================
+   CSS Reset and Base Styles
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===================================
+   Mobile-First Layout (Base Styles)
+   =================================== */
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.my-account {
+  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.my-account:hover {
+  color: #00bcd4;
+}
+
+/* Navigation Styles */
+.main-nav {
+  background-color: #34495e;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-list li {
+  flex: 1;
+  min-width: 80px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+  background-color: #2c3e50;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Delorean Showcase */
+.delorean-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.delorean-info {
+  order: 1;
+}
+
+.delorean-title {
+  font-size: 1.5rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.delorean-features {
+  margin-bottom: 1.5rem;
+}
+
+.delorean-features li {
+  color: #00bcd4;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+
+.btn-own {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-own:hover {
+  background-color: #0097a7;
+}
+
+.delorean-image {
+  order: 2;
+}
+
+.delorean-image img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Content Grid */
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Upgrades Section */
+.upgrades h2,
+.reviews h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.upgrade-item {
+  background-color: #00bcd4;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.upgrade-item:hover {
+  transform: translateY(-5px);
+}
+
+.upgrade-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+}
+
+.upgrade-link {
+  color: #0d47a1;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.upgrade-link:hover {
+  text-decoration: underline;
+}
+
+/* Reviews Section */
+.reviews-list {
+  padding-left: 1.5rem;
+}
+
+.reviews-list li {
+  list-style: disc;
+  margin-bottom: 0.75rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+}
+
+/* ===================================
+   Media Queries for Larger Screens
+   =================================== */
+
+@media screen and (min-width: 768px) {
+  /* Delorean Showcase - Side by Side */
+  .delorean-showcase {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .delorean-info {
+    flex: 1;
+    order: 1;
+  }
+
+  .delorean-image {
+    flex: 1;
+    order: 2;
+  }
+
+  /* Content Grid - Side by Side */
+  .content-grid {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .upgrades,
+  .reviews {
+    flex: 1;
+  }
+
+  /* Add checkered border for large screens */
+  .wrapper {
+    border: 20px solid transparent;
+    border-image: repeating-linear-gradient(
+        45deg,
+        #000 0,
+        #000 20px,
+        #fff 20px,
+        #fff 40px,
+        #000 40px,
+        #000 60px,
+        #fff 60px,
+        #fff 80px
+      )
+      20;
+    background-color: #fff;
+  }
+
+  body {
+    background: repeating-conic-gradient(#000 0% 25%, #fff 0% 50%) 0 0 / 40px 40px;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site-title {
+    font-size: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .delorean-title {
+    font-size: 1.8rem;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .upgrade-item img {
+    height: 150px;
+  }
 }
