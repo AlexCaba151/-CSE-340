@@ -64,7 +64,7 @@ a {
 }
 
 .siteName a:hover {
-  color: #00bcd4;
+  color: #00bbd48f;
 }
 
 /* Header Tools (My Account) */
@@ -74,11 +74,11 @@ a {
 }
 
 #tools a {
-  color: #fff;
+  color: #ffffff;
   font-size: 1.2rem;
   transition: all 0.3s;
   text-align: center;
-  background-color: #00bcd4;
+  background-color: #34495e;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   font-weight: bold;
@@ -87,7 +87,7 @@ a {
 }
 
 #tools a:hover {
-  background-color: #0097a7;
+  background-color: #00bbd48f;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -179,9 +179,9 @@ main {
 }
 
 .hero-content h1 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: #2c3e50;
   text-align: left;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   width: 100%;
@@ -226,8 +226,8 @@ main {
 }
 
 .btn-own {
-  background-color: #00bcd4;
-  color: #fff;
+  background-color: #00bbd48f;
+  color: #2c3e50;
   border: none;
   padding: 0.75rem 2rem;
   font-size: 1rem;
@@ -271,7 +271,7 @@ main {
 }
 
 .upgrade-item {
-  background-color: #00bcd4;
+  background-color: #00bbd48f;
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s;
@@ -291,10 +291,11 @@ main {
 }
 
 .upgrade-link {
-  color: #0d47a1;
+  color: #ffffff;
   font-weight: bold;
   display: block;
   margin-top: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .upgrade-link:hover {
@@ -327,7 +328,7 @@ main {
 }
 
 /* ===================================
-   Media Queries for Larger Screens
+  Media Queries for Larger Screens
    =================================== */
 
 @media screen and (min-width: 768px) {
