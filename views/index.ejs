@@ -1,71 +1,73 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', { title: title }) %>
+  <%- include('./partials/head', { title: title }) %>
 <body>
   <div class="wrapper">
+
     <%- include('./partials/header') %>
-    <%- include('./partials/navigation') %>
-    
+    <%- include('./partials/navigation', { nav: nav }) %>
+
     <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Welcome to CSE Motors!</h1>
-          
-          <div class="delorean-showcase">
-            <div class="delorean-info">
-              <h2 class="delorean-title">DMC Delorean</h2>
-              <ul class="delorean-features">
-                <li>3 Cup holders</li>
-                <li>Superman doors</li>
-                <li>Fuzzy dice!</li>
-              </ul>
-              <button class="btn-own">Own Today</button>
-            </div>
-            <div class="delorean-image">
-              <img src="/images/delorean.png" alt="DMC Delorean" />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <div class="content-grid">
-        <section class="upgrades">
-          <h2>Delorean Upgrades</h2>
-          <div class="upgrades-grid">
-            <div class="upgrade-item">
-              <img src="/images/upgrades/flux-capacitor.jpg" alt="Flux Capacitor" />
-              <a href="#" class="upgrade-link">Flux Capacitor</a>
-            </div>
-            <div class="upgrade-item">
-              <img src="/images/upgrades/flame.png" alt="Flame Decals" />
-              <a href="#" class="upgrade-link">Flame Decals</a>
-            </div>
-            <div class="upgrade-item">
-              <img src="/images/upgrades/bumper-sticker.webp" alt="Bumper Stickers" />
-              <a href="#" class="upgrade-link">Bumper Stickers</a>
-            </div>
-            <div class="upgrade-item">
-              <img src="/images/upgrades/hub-cap.png" alt="Hub Caps" />
-              <a href="#" class="upgrade-link">Hub Caps</a>
-            </div>
-          </div>
-        </section>
+<!-- HOME PAGE CONTENT ONLY -->
 
-        <section class="reviews">
-          <h2>DMC Delorean Reviews</h2>
-          <ul class="reviews-list">
-            <li>"So fast it's almost like traveling in time." (4/5)</li>
-            <li>"Coolest ride on the road." (4/5)</li>
-            <li>"I'm feeling McFly!" (5/5)</li>
-            <li>"The most futuristic ride of our day." (4.5/5)</li>
-            <li>"80's livin and I love it!" (5/5)</li>
-          </ul>
-        </section>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to CSE Motors!</h1>
+
+    <div class="delorean-showcase">
+      <div class="delorean-info">
+        <h2 class="delorean-title">DMC Delorean</h2>
+        <ul class="delorean-features">
+          <li>3 Cup holders</li>
+          <li>Superman doors</li>
+          <li>Fuzzy dice!</li>
+        </ul>
+        <button class="btn-own">Own Today</button>
       </div>
-    </main>
 
-    <%- include('./partials/footer') %>
+      <div class="delorean-image">
+        <img src="/images/delorean.png" alt="DMC Delorean" />
+      </div>
+    </div>
   </div>
-</body>
-</html>
+</section>
 
+<div class="content-grid">
+  <section class="upgrades">
+    <h2>Delorean Upgrades</h2>
+
+    <div class="upgrades-grid">
+      <div class="upgrade-item">
+        <img src="/images/upgrades/flux-capacitor.jpg" alt="Flux Capacitor" />
+        <a href="#" class="upgrade-link">Flux Capacitor</a>
+      </div>
+      <div class="upgrade-item">
+        <img src="/images/upgrades/flame.png" alt="Flame Decals" />
+        <a href="#" class="upgrade-link">Flame Decals</a>
+      </div>
+      <div class="upgrade-item">
+        <img src="/images/upgrades/bumper-sticker.webp" alt="Bumper Stickers" />
+        <a href="#" class="upgrade-link">Bumper Stickers</a>
+      </div>
+      <div class="upgrade-item">
+        <img src="/images/upgrades/hub-cap.png" alt="Hub Caps" />
+        <a href="#" class="upgrade-link">Hub Caps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>DMC Delorean Reviews</h2>
+    <ul class="reviews-list">
+      <li>"So fast it's almost like traveling in time." (4/5)</li>
+      <li>"Coolest ride on the road." (4/5)</li>
+      <li>"I'm feeling McFly!" (5/5)</li>
+      <li>"The most futuristic ride of our day." (4.5/5)</li>
+      <li>"80's livin and I love it!" (5/5)</li>
+    </ul>
+  </section>
+</div>
+</main>

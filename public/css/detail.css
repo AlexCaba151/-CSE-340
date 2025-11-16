@@ -1,0 +1,59 @@
+/* ===== VEHICLE DETAIL PAGE ===== */
+
+.vehicle-detail {
+  padding: 1.5rem;
+}
+
+.vehicle-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Image */
+.vehicle-detail-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Info */
+.vehicle-detail-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.vehicle-detail-info p {
+  margin-bottom: .7rem;
+  font-size: 1.1rem;
+}
+
+.price {
+  font-size: 1.6rem;
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.miles {
+  font-weight: bold;
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .vehicle-detail-container {
+    flex-direction: row;
+  }
+  
+  .vehicle-detail-img {
+    width: 50%;
+  }
+
+  .vehicle-detail-info {
+    width: 50%;
+    padding-left: 2rem;
+  }
+}

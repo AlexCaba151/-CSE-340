@@ -1,0 +1,12 @@
+<%- include("../partials/head", { title: title, cssFile: "/css/inventory.css" }) %>
+<%- include('../partials/header') %>
+<%- include('../partials/navigation', { nav: nav }) %>
+
+
+
+<main class="inventory-wrapper">
+  <h1><%= title %></h1>
+  <%- grid %>
+</main>
+
+<%- include('../partials/footer') %>

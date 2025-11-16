@@ -1,0 +1,57 @@
+/* ===== INVENTORY LIST PAGE ===== */
+
+.inventory-wrapper h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Grid */
+#inv-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#inv-display li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform .2s, box-shadow .2s;
+}
+
+#inv-display li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+#inv-display img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.namePrice {
+  text-align: center;
+  margin-top: .8rem;
+}
+
+.namePrice h2 {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  color: #34495e;
+}
+
+.namePrice span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #00bcd4;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .inventory-wrapper h1 {
+    text-align: center;
+  }
+}
