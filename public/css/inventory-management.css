@@ -1,0 +1,139 @@
+/* ========= GENERAL PAGE LAYOUT ========= */
+.page-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+}
+
+.page-wrapper h1 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+}
+
+/* ========= NOTICES & ERRORS ========= */
+.notice {
+  background: #e0f7fa;
+  color: #006064;
+  padding: 1rem;
+  border-left: 5px solid #00bcd4;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.errors {
+  background: #ffebee;
+  color: #b71c1c;
+  padding: 1rem;
+  border-left: 5px solid #e53935;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.errors ul {
+  margin-left: 1.5rem;
+}
+
+/* ========= MANAGEMENT LINKS ========= */
+.inv-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.inv-links li {
+  margin-bottom: 1rem;
+}
+
+.inv-links a {
+  display: inline-block;
+  background: #34495e;
+  color: #fff;
+  padding: .9rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: .3s;
+}
+
+.inv-links a:hover {
+  background: #00bbd48f;
+  transform: translateY(-2px);
+}
+
+/* ========= FORMS ========= */
+form {
+  margin-top: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: .4rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: .8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: .2s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #00bcd4;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,188,212,.2);
+}
+
+/* Valid/invalid visual indicators */
+input:valid {
+  border-color: #4caf50;
+}
+
+input:invalid {
+  border-color: #e53935;
+}
+
+/* ========= SUBMIT BUTTON ========= */
+form button {
+  background: #34495e;
+  color: #fff;
+  padding: .85rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+form button:hover {
+  background: #00bbd48f;
+  transform: translateY(-2px);
+}
+
+/* ========= MOBILE ========= */
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 1.2rem;
+  }
+
+  .inv-links a,
+  form button {
+    width: 100%;
+    text-align: center;
+  }
+}

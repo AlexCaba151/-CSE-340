@@ -1,0 +1,83 @@
+main {
+  padding: 2rem 1rem;
+}
+
+/* Error list */
+.errors li,
+.notice {
+  color: #d32f2f;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+
+/* Main form container */
+.inventory-form-box {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #0da8d6d0;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #0b5f74;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #033c4c;
+  font-weight: 600;
+}
+
+/* Inputs & select */
+select,
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: .8rem;
+  margin-top: .3rem;
+  border: 2px solid #0b5f74;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: #fff;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Valid input */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: #2e7d32;
+}
+
+/* Invalid input */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: #c62828;
+}
+
+/* Submit button */
+button,
+input[type="submit"] {
+  margin-top: 1.5rem;
+  padding: .8rem 1.8rem;
+  background: #033c4c;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #055c74;
+}
